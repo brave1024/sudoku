@@ -930,7 +930,7 @@ int *allLevel4[100] = {level1_4[0], level2_4[0], level3_4[0], level4_4[0], level
 
 
 
-// 第五大关的99小关...
+// 第五大关的45小关...
 
 
 
@@ -1039,7 +1039,11 @@ int level100_5
 */
 
 
-
+int *allLevel5[45] = {level1_5[0], level2_5[0], level3_5[0], level4_5[0], level5_5[0], level6_5[0], level7_5[0], level8_5[0], level9_5[0], level10_5[0],
+	level11_5[0], level12_5[0], level13_5[0], level14_5[0], level15_5[0], level16_5[0], level17_5[0], level18_5[0], level19_5[0], level20_5[0],
+	level21_5[0], level22_5[0], level23_5[0], level24_5[0], level25_5[0], level26_5[0], level27_5[0], level28_5[0], level29_5[0], level30_5[0],
+	level31_5[0], level32_5[0], level33_5[0], level34_5[0], level35_5[0], level36_5[0], level37_5[0], level38_5[0], level39_5[0], level40_5[0],
+	level41_5[0], level42_5[0], level43_5[0], level44_5[0], level45_5[0]/*, level46_5[0], level47_5[0], level48_5[0], level49_5[0], level50_5[0]*/};
 
 
 

@@ -112,7 +112,6 @@
 		2AC4B31814EB62F200A31B27 /* SudokuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC4B31714EB62F200A31B27 /* SudokuViewController.m */; };
 		2AC4B31B14EB62F200A31B27 /* SudokuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AC4B31914EB62F200A31B27 /* SudokuViewController.xib */; };
 		2AC4B32414EB67F300A31B27 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC4B32314EB67F200A31B27 /* AVFoundation.framework */; };
-		2AC4B32F14EB8F8300A31B27 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AC4B32E14EB8F8300A31B27 /* Default.png */; };
 		2AC4B33314EB907600A31B27 /* levelPage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC4B33214EB907600A31B27 /* levelPage.jpg */; };
 		2AC4B33C14EB92F100A31B27 /* LevelSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC4B33A14EB92F000A31B27 /* LevelSelectViewController.m */; };
 		2AC4B33D14EB92F100A31B27 /* LevelSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AC4B33B14EB92F000A31B27 /* LevelSelectViewController.xib */; };
@@ -156,6 +155,10 @@
 		2AC4B39314EB9C9800A31B27 /* gamePage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC4B38F14EB9C9500A31B27 /* gamePage.jpg */; };
 		2AC4B39414EB9C9800A31B27 /* quickPage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC4B39014EB9C9600A31B27 /* quickPage.jpg */; };
 		2AC4B39514EB9C9800A31B27 /* settingPage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC4B39114EB9C9700A31B27 /* settingPage.jpg */; };
+		419641B11897559100549743 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 419641AF1897559100549743 /* icon.png */; };
+		419641B21897559100549743 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 419641B01897559100549743 /* icon@2x.png */; };
+		419641B8189757DA00549743 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 419641B6189757DA00549743 /* libMobClickLibrary.a */; };
+		419641BA1897581700549743 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 419641B91897581700549743 /* libz.dylib */; };
 		5402805A14FAF69D0004FCFB /* close_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5402805514FAF69D0004FCFB /* close_1.png */; };
 		5402805B14FAF69D0004FCFB /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 5402805614FAF69D0004FCFB /* close.png */; };
 		5402805C14FAF69D0004FCFB /* open_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5402805714FAF69D0004FCFB /* open_1.png */; };
@@ -279,7 +282,6 @@
 		2AC4B31A14EB62F200A31B27 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SudokuViewController.xib; sourceTree = "<group>"; };
 		2AC4B32314EB67F200A31B27 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		2AC4B32514EB69B300A31B27 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
-		2AC4B32E14EB8F8300A31B27 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Img/Default.png; sourceTree = "<group>"; };
 		2AC4B33214EB907600A31B27 /* levelPage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = levelPage.jpg; path = Img/Base/levelPage.jpg; sourceTree = "<group>"; };
 		2AC4B33914EB92F000A31B27 /* LevelSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelSelectViewController.h; sourceTree = "<group>"; };
 		2AC4B33A14EB92F000A31B27 /* LevelSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelSelectViewController.m; sourceTree = "<group>"; };
@@ -329,6 +331,11 @@
 		2AC4B38F14EB9C9500A31B27 /* gamePage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = gamePage.jpg; path = Img/Base/gamePage.jpg; sourceTree = "<group>"; };
 		2AC4B39014EB9C9600A31B27 /* quickPage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = quickPage.jpg; path = Img/Base/quickPage.jpg; sourceTree = "<group>"; };
 		2AC4B39114EB9C9700A31B27 /* settingPage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = settingPage.jpg; path = Img/Base/settingPage.jpg; sourceTree = "<group>"; };
+		419641AF1897559100549743 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		419641B01897559100549743 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		419641B6189757DA00549743 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
+		419641B7189757DA00549743 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		419641B91897581700549743 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		5402805514FAF69D0004FCFB /* close_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = close_1.png; path = Img/Base/close_1.png; sourceTree = "<group>"; };
 		5402805614FAF69D0004FCFB /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = close.png; path = Img/Base/close.png; sourceTree = "<group>"; };
 		5402805714FAF69D0004FCFB /* open_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = open_1.png; path = Img/Base/open_1.png; sourceTree = "<group>"; };
@@ -344,10 +351,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				419641BA1897581700549743 /* libz.dylib in Frameworks */,
 				2AC4B32414EB67F300A31B27 /* AVFoundation.framework in Frameworks */,
 				2AC4B30214EB62F100A31B27 /* UIKit.framework in Frameworks */,
 				2AC4B30414EB62F100A31B27 /* Foundation.framework in Frameworks */,
 				2AC4B30614EB62F100A31B27 /* CoreGraphics.framework in Frameworks */,
+				419641B8189757DA00549743 /* libMobClickLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +492,7 @@
 		2AC4B30014EB62F100A31B27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				419641B91897581700549743 /* libz.dylib */,
 				2AC4B32314EB67F200A31B27 /* AVFoundation.framework */,
 				2AC4B30114EB62F100A31B27 /* UIKit.framework */,
 				2AC4B30314EB62F100A31B27 /* Foundation.framework */,
@@ -494,6 +504,7 @@
 		2AC4B30714EB62F100A31B27 /* Sudoku */ = {
 			isa = PBXGroup;
 			children = (
+				419641B5189757DA00549743 /* UMAnalytics */,
 				2AC4B31014EB62F200A31B27 /* SudokuAppDelegate.h */,
 				2AC4B31114EB62F200A31B27 /* SudokuAppDelegate.m */,
 				2AC4B31314EB62F200A31B27 /* MainWindow.xib */,
@@ -528,10 +539,10 @@
 		2AC4B32C14EB8F1900A31B27 /* Img */ = {
 			isa = PBXGroup;
 			children = (
+				419641AE1897559100549743 /* icon */,
 				2A77593214EDFE94000B2BFF /* Num */,
 				2AC4B33114EB906900A31B27 /* Button */,
 				2AC4B33014EB906100A31B27 /* Base */,
-				2AC4B32E14EB8F8300A31B27 /* Default.png */,
 			);
 			name = Img;
 			sourceTree = "<group>";
@@ -650,6 +661,25 @@
 			name = PageView;
 			sourceTree = "<group>";
 		};
+		419641AE1897559100549743 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				419641AF1897559100549743 /* icon.png */,
+				419641B01897559100549743 /* icon@2x.png */,
+			);
+			name = icon;
+			path = Img/icon;
+			sourceTree = "<group>";
+		};
+		419641B5189757DA00549743 /* UMAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				419641B6189757DA00549743 /* libMobClickLibrary.a */,
+				419641B7189757DA00549743 /* MobClick.h */,
+			);
+			path = UMAnalytics;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -679,7 +709,7 @@
 				ORGANIZATIONNAME = "amoeba workshop";
 				TargetAttributes = {
 					2AC4B2FC14EB62F100A31B27 = {
-						DevelopmentTeam = 6Z3H4837E8;
+						DevelopmentTeam = 3XEAPXTP26;
 					};
 				};
 			};
@@ -708,7 +738,6 @@
 				2AC4B30C14EB62F200A31B27 /* InfoPlist.strings in Resources */,
 				2AC4B31514EB62F200A31B27 /* MainWindow.xib in Resources */,
 				2AC4B31B14EB62F200A31B27 /* SudokuViewController.xib in Resources */,
-				2AC4B32F14EB8F8300A31B27 /* Default.png in Resources */,
 				2AC4B33314EB907600A31B27 /* levelPage.jpg in Resources */,
 				2AC4B33D14EB92F100A31B27 /* LevelSelectViewController.xib in Resources */,
 				2AC4B33F14EB93CD00A31B27 /* mainPage.jpg in Resources */,
@@ -726,6 +755,7 @@
 				2AC4B35714EB93D900A31B27 /* gk_6.png in Resources */,
 				2AC4B36314EB946400A31B27 /* backBt.png in Resources */,
 				2AC4B36414EB946400A31B27 /* fm_1_1.png in Resources */,
+				419641B11897559100549743 /* icon.png in Resources */,
 				2AC4B36514EB946400A31B27 /* fm_1.png in Resources */,
 				2AC4B36614EB946400A31B27 /* fm_2_1.png in Resources */,
 				2AC4B36714EB946400A31B27 /* fm_2.png in Resources */,
@@ -764,6 +794,7 @@
 				2A77593F14EDFEA5000B2BFF /* num4.png in Resources */,
 				2A77594014EDFEA5000B2BFF /* num5.png in Resources */,
 				2A77594114EDFEA5000B2BFF /* num6.png in Resources */,
+				419641B21897559100549743 /* icon@2x.png in Resources */,
 				2A77594214EDFEA5000B2BFF /* num7.png in Resources */,
 				2A77594314EDFEA5000B2BFF /* num8.png in Resources */,
 				2A77594414EDFEA5000B2BFF /* num9.png in Resources */,
@@ -920,7 +951,8 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "E7E07C91-A6DD-4B9F-A7FF-935BE060BD16";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -930,15 +962,17 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Rogrand (Wuhan) Consulting Services Co., Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rogrand (Wuhan) Consulting Services Co., Ltd.";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "E7E07C91-A6DD-4B9F-A7FF-935BE060BD16";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -953,9 +987,13 @@
 				GCC_PREFIX_HEADER = "Sudoku/Sudoku-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Sudoku/Sudoku-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/xiazhiyong/Desktop/sudoku/Sudoku/Sudoku/UMAnalytics,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "E7E07C91-A6DD-4B9F-A7FF-935BE060BD16";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -963,15 +1001,19 @@
 		2AC4B32014EB62F200A31B27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Rogrand (Wuhan) Consulting Services Co., Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rogrand (Wuhan) Consulting Services Co., Ltd.";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sudoku/Sudoku-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Sudoku/Sudoku-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/xiazhiyong/Desktop/sudoku/Sudoku/Sudoku/UMAnalytics,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "E7E07C91-A6DD-4B9F-A7FF-935BE060BD16";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -981,7 +1023,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 貫亮 Chen (U7N35ZPJSS)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Rogrand (Wuhan) Consulting Services Co., Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rogrand (Wuhan) Consulting Services Co., Ltd.";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -996,8 +1039,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_PROFILING_CODE = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
+				PROVISIONING_PROFILE = "E7E07C91-A6DD-4B9F-A7FF-935BE060BD16";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D84F6693-987E-4F5B-BA9C-885B80865BFF";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos4.2;
@@ -1008,15 +1052,19 @@
 		2AC4B32214EB66F200A31B27 /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Rogrand (Wuhan) Consulting Services Co., Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rogrand (Wuhan) Consulting Services Co., Ltd.";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sudoku/Sudoku-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Sudoku/Sudoku-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/xiazhiyong/Desktop/sudoku/Sudoku/Sudoku/UMAnalytics,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "E7E07C91-A6DD-4B9F-A7FF-935BE060BD16";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Distribution;

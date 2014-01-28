@@ -74,32 +74,40 @@ NSString *closeStr = @"close.png";
 	numOfLevel = appDelegate.quickNum;	// 关卡
 	gameTime = appDelegate.timeCount;	// 计时
 	
-	
-	// 音乐
-	if (musicIsOpen) {
-		
-		[musicOpenBt setImage:[UIImage imageNamed:openSelectedStr] forState:UIControlStateNormal];
-		[musicCloseBt setImage:[UIImage imageNamed:closeStr] forState:UIControlStateNormal];
-		
-	}else {
-		
-		[musicOpenBt setImage:[UIImage imageNamed:openStr] forState:UIControlStateNormal];
-		[musicCloseBt setImage:[UIImage imageNamed:closeSelectedStr] forState:UIControlStateNormal];
-		
-	}
-
-	// 音效
-	if (soundIsOpen) {
-		
-		[soundOpenBt setImage:[UIImage imageNamed:openSelectedStr] forState:UIControlStateNormal];
-		[soundCloseBt setImage:[UIImage imageNamed:closeStr] forState:UIControlStateNormal];
-		
-	}else {
-		
-		[soundOpenBt setImage:[UIImage imageNamed:openStr] forState:UIControlStateNormal];
-		[soundCloseBt setImage:[UIImage imageNamed:closeSelectedStr] forState:UIControlStateNormal];
-		
-	}
+    [musicOpenBt setImage:[UIImage imageNamed:openStr] forState:UIControlStateNormal];
+    [musicCloseBt setImage:[UIImage imageNamed:closeSelectedStr] forState:UIControlStateNormal];
+    [soundOpenBt setImage:[UIImage imageNamed:openStr] forState:UIControlStateNormal];
+    [soundCloseBt setImage:[UIImage imageNamed:closeSelectedStr] forState:UIControlStateNormal];
+    musicOpenBt.enabled = NO;
+    musicCloseBt.enabled = NO;
+    soundOpenBt.enabled = NO;
+    soundCloseBt.enabled = NO;
+    
+//	// 音乐
+//	if (musicIsOpen) {
+//		
+//		[musicOpenBt setImage:[UIImage imageNamed:openSelectedStr] forState:UIControlStateNormal];
+//		[musicCloseBt setImage:[UIImage imageNamed:closeStr] forState:UIControlStateNormal];
+//		
+//	}else {
+//		
+//		[musicOpenBt setImage:[UIImage imageNamed:openStr] forState:UIControlStateNormal];
+//		[musicCloseBt setImage:[UIImage imageNamed:closeSelectedStr] forState:UIControlStateNormal];
+//		
+//	}
+//
+//	// 音效
+//	if (soundIsOpen) {
+//		
+//		[soundOpenBt setImage:[UIImage imageNamed:openSelectedStr] forState:UIControlStateNormal];
+//		[soundCloseBt setImage:[UIImage imageNamed:closeStr] forState:UIControlStateNormal];
+//		
+//	}else {
+//		
+//		[soundOpenBt setImage:[UIImage imageNamed:openStr] forState:UIControlStateNormal];
+//		[soundCloseBt setImage:[UIImage imageNamed:closeSelectedStr] forState:UIControlStateNormal];
+//		
+//	}
 	
 	// 帮助
 	if (showHelp) {
@@ -246,7 +254,7 @@ NSString *closeStr = @"close.png";
 	
 	if (gameLevel == 1) {
 		
-		gameLevel = 5;
+		gameLevel = 4;
 		
 	}else {
 		
@@ -262,7 +270,7 @@ NSString *closeStr = @"close.png";
 
 	//NSLog(@"levelAddAction");
 	
-	if (gameLevel == 5) {
+	if (gameLevel == 4) {
 		
 		gameLevel = 1;
 		

@@ -11,9 +11,7 @@
 #import "UserInfo.h"
 #import "playGameViewController.h"
 
-
 @implementation LevelSelectViewController
-
 
 @synthesize levelScrollView;
 //@synthesize allButtonArr;
@@ -26,11 +24,7 @@
 @synthesize pageController;
 @synthesize waitAlert;
 
-
 const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
-
-
-
 
 
 
@@ -106,51 +100,53 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 		
 	}
 	
-	if (bigLevel != 6) {
+//	if (bigLevel != 5) {
+//	
+//		pageController.numberOfPages = 11;
+//		
+//	}else {
+//		
+//		pageController.numberOfPages = 5;
+//		
+//	}
 	
-		pageController.numberOfPages = 11;
-		
-	}else {
-		
-		pageController.numberOfPages = 3;
-		
-	}
-	
+    pageController.numberOfPages = 11;
+    
 	
 	/************************************/
 	
 	
 	// 获取隐藏关是否开启...
 	// 若未开启,则不可点击...!!!
-	if ([userInfo objectForKey:@"hideLevel"] == nil) {
-		
-		// 隐藏关暂时设置为开......!!!
-		hideLevelShow = NO;
-		[userInfo setBool:NO forKey:@"hideLevel"];
-		
-	}else {
-		
-		hideLevelShow = [userInfo boolForKey:@"hideLevel"];
-		
-	}
-
-	if (hideLevelShow == NO) {	// 隐藏关未开启...点击bt无效
-		
-		whatBt.userInteractionEnabled = NO;
-		
-	}else {						// 隐藏关已开启...点击bt有效
-		
-		whatBt.userInteractionEnabled = YES;
-		
-	}
-	
+    // 当前版本不再有隐藏关...2014.01.28
+//	if ([userInfo objectForKey:@"hideLevel"] == nil) {
+//		
+//		// 隐藏关暂时设置为开......!!!
+//		hideLevelShow = NO;
+//		[userInfo setBool:NO forKey:@"hideLevel"];
+//		
+//	}else {
+//		
+//		hideLevelShow = [userInfo boolForKey:@"hideLevel"];
+//		
+//	}
+//
+//	if (hideLevelShow == NO) {	// 隐藏关未开启...点击bt无效
+//		
+//		whatBt.userInteractionEnabled = NO;
+//		
+//	}else {						// 隐藏关已开启...点击bt有效
+//		
+//		whatBt.userInteractionEnabled = YES;
+//		
+//	}
 	
 	
 	// 根据大关索引来设置当前大关下的所有小关信息...
 	// 首先获得当前大关的前缀...1#Level
 	// 然后获得当前大关下的小关开启个数...1#Level_openNum
 	NSString *smallNumStr = [NSString stringWithFormat:@"%d#Level_openNum", bigLevel];
-	//NSLog(@"当前大关下所有小关的开启个数的key:%@", smallNumStr);
+	NSLog(@"当前大关下所有小关的开启个数的key:%@", smallNumStr);
 	
 	if ([userInfo objectForKey:smallNumStr] == nil) {
 		
@@ -161,44 +157,43 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 		switch (bigLevel) {
 			case 1:
 				
-				smallOpenNum = 99;	// 若是首先进入 or 没有通过一次关, 则启用默认设置, 只开放3关, 并保存设置
+				smallOpenNum = 99;	// 若是首先进入 or 没有通过一次关, 则启用默认设置, 只开放99关, 并保存设置
 				[userInfo setInteger:99 forKey:smallNumStr];
 				
 				break;
 			case 2:
 				
-				smallOpenNum = 6;	// 若是首先进入 or 没有通过一次关, 则启用默认设置, 只开放3关, 并保存设置
-				[userInfo setInteger:6 forKey:smallNumStr];
+				smallOpenNum = 18;	// 若是首先进入 or 没有通过一次关, 则启用默认设置, 只开放18关, 并保存设置
+				[userInfo setInteger:18 forKey:smallNumStr];
 				
 				break;
 			case 3:
+				
+				smallOpenNum = 9;	// 若是首先进入 or 没有通过一次关, 则启用默认设置, 只开放9关, 并保存设置
+				[userInfo setInteger:9 forKey:smallNumStr];
+				
+				break;
+			case 4:
 				
 				smallOpenNum = 3;	// 若是首先进入 or 没有通过一次关, 则启用默认设置, 只开放3关, 并保存设置
 				[userInfo setInteger:3 forKey:smallNumStr];
 				
 				break;
-			case 4:
-				
-				smallOpenNum = 2;	// 若是首先进入 or 没有通过一次关, 则启用默认设置, 只开放3关, 并保存设置
-				[userInfo setInteger:2 forKey:smallNumStr];
-				
-				break;
-			case 5:
-				
-				smallOpenNum = 1;	// 若是首先进入 or 没有通过一次关, 则启用默认设置, 只开放3关, 并保存设置
-				[userInfo setInteger:1 forKey:smallNumStr];
-				
-				break;
-			case 6:
-				
-				smallOpenNum = 9;	// 若是首先进入 or 没有通过一次关, 则启用默认设置, 只开放3关, 并保存设置
-				[userInfo setInteger:9 forKey:smallNumStr];
-				
-				break;
+//			case 5:
+//				
+//				smallOpenNum = 1;	// 若是首先进入 or 没有通过一次关, 则启用默认设置, 只开放3关, 并保存设置
+//				[userInfo setInteger:1 forKey:smallNumStr];
+//				
+//				break;
+//			case 6:
+//				
+//				smallOpenNum = 9;	// 若是首先进入 or 没有通过一次关, 则启用默认设置, 只开放3关, 并保存设置
+//				[userInfo setInteger:9 forKey:smallNumStr];
+//				
+//				break;
 			default:
 				break;
 		}
-		
 		
 	}else {
 		
@@ -208,7 +203,7 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 	}
 	
 	
-	[self checkAllBigLevelStatus];	// 每次均要判断是否可激活隐藏关 or 五大关...
+//	[self checkAllBigLevelStatus];	// 每次均要判断是否可激活隐藏关 or 五大关...
 	
 	
 	// 获取大关索引与小关个数over...
@@ -226,9 +221,9 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 	[self.view addSubview:levelScrollView];
 		
 	
-	if (bigLevel == 6) {	// 若是一开始便进入隐藏关,则...
-		[levelScrollView setContentSize:CGSizeMake(306*3, 306)];
-	}
+//	if (bigLevel == 6) {	// 若是一开始便进入隐藏关,则...
+//		[levelScrollView setContentSize:CGSizeMake(306*3, 306)];
+//	}
 	
 }
 
@@ -282,7 +277,7 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 
 	int bigCount = 0;
 	
-	for (int i = 1; i < 6; i++) {	// 遍历五大关...
+	for (int i = 1; i < 5; i++) {	// 遍历四大关...
 		
 		NSString *smallNumStr = [NSString stringWithFormat:@"%d#Level_openNum", i];
 		
@@ -303,15 +298,15 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 	
 	if (bigCount == 1) {		// 启动隐藏关
 		
-		[userInfo setBool:YES forKey:@"hideLevel"];
-		
-		hideLevelShow = YES;
-		
-		whatBt.userInteractionEnabled = YES;
+//		[userInfo setBool:YES forKey:@"hideLevel"];
+//		
+//		hideLevelShow = YES;
+//		
+//		whatBt.userInteractionEnabled = YES;
 		
 	}else if (bigCount == 2) {	// 激活所有关...
 		
-		for (int i = 1; i < 6; i++) {	// 遍历五大关...所有关开启...!!!
+		for (int i = 1; i < 5; i++) {	// 遍历四大关...所有关开启...!!!
 			
 			NSString *smallNumStr = [NSString stringWithFormat:@"%d#Level_openNum", i];
 			
@@ -320,7 +315,6 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 		}
 		
 	}
-	
 	
 }
 
@@ -378,27 +372,27 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 			
 			break;
 
-		case 5:
-			
-			// 极难
-			[veryEasyBt setImage:[UIImage imageNamed:@"gk_1.png"] forState:UIControlStateNormal];
-			[easyBt setImage:[UIImage imageNamed:@"gk_2.png"] forState:UIControlStateNormal];
-			[normalBt setImage:[UIImage imageNamed:@"gk_3.png"] forState:UIControlStateNormal];
-			[hardBt setImage:[UIImage imageNamed:@"gk_4.png"] forState:UIControlStateNormal];
-			[veryHardBt setImage:[UIImage imageNamed:@"gk_5_1.png"] forState:UIControlStateNormal];
-			[whatBt setImage:[UIImage imageNamed:@"gk_6.png"] forState:UIControlStateNormal];
-			break;
-			
-		case 6:
-			
-			// what
-			[veryEasyBt setImage:[UIImage imageNamed:@"gk_1.png"] forState:UIControlStateNormal];
-			[easyBt setImage:[UIImage imageNamed:@"gk_2.png"] forState:UIControlStateNormal];
-			[normalBt setImage:[UIImage imageNamed:@"gk_3.png"] forState:UIControlStateNormal];
-			[hardBt setImage:[UIImage imageNamed:@"gk_4.png"] forState:UIControlStateNormal];
-			[veryHardBt setImage:[UIImage imageNamed:@"gk_5.png"] forState:UIControlStateNormal];
-			[whatBt setImage:[UIImage imageNamed:@"gk_6_1.png"] forState:UIControlStateNormal];
-			break;
+//		case 5:
+//			
+//			// 极难
+//			[veryEasyBt setImage:[UIImage imageNamed:@"gk_1.png"] forState:UIControlStateNormal];
+//			[easyBt setImage:[UIImage imageNamed:@"gk_2.png"] forState:UIControlStateNormal];
+//			[normalBt setImage:[UIImage imageNamed:@"gk_3.png"] forState:UIControlStateNormal];
+//			[hardBt setImage:[UIImage imageNamed:@"gk_4.png"] forState:UIControlStateNormal];
+//			[veryHardBt setImage:[UIImage imageNamed:@"gk_5_1.png"] forState:UIControlStateNormal];
+//			[whatBt setImage:[UIImage imageNamed:@"gk_6.png"] forState:UIControlStateNormal];
+//			break;
+//			
+//		case 6:
+//			
+//			// what
+//			[veryEasyBt setImage:[UIImage imageNamed:@"gk_1.png"] forState:UIControlStateNormal];
+//			[easyBt setImage:[UIImage imageNamed:@"gk_2.png"] forState:UIControlStateNormal];
+//			[normalBt setImage:[UIImage imageNamed:@"gk_3.png"] forState:UIControlStateNormal];
+//			[hardBt setImage:[UIImage imageNamed:@"gk_4.png"] forState:UIControlStateNormal];
+//			[veryHardBt setImage:[UIImage imageNamed:@"gk_5.png"] forState:UIControlStateNormal];
+//			[whatBt setImage:[UIImage imageNamed:@"gk_6_1.png"] forState:UIControlStateNormal];
+//			break;
 			
 		default:
 			break;
@@ -592,12 +586,12 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 	[whatBt setImage:[UIImage imageNamed:@"gk_6.png"] forState:UIControlStateNormal];
 	
 	
-	if (bigLevel == 6) {
-		
-		NSLog(@"从隐藏关返回到五大关......@@@");
-		[self resettingLevelBtForAllFiveLevel];
-		
-	}
+//	if (bigLevel == 6) {
+//		
+//		NSLog(@"从隐藏关返回到五大关......@@@");
+//		[self resettingLevelBtForAllFiveLevel];
+//		
+//	}
 	
 	
 	// 设置大关...
@@ -631,12 +625,12 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 	[whatBt setImage:[UIImage imageNamed:@"gk_6.png"] forState:UIControlStateNormal];
 	
 	
-	if (bigLevel == 6) {
-		
-		NSLog(@"从隐藏关返回到五大关......@@@");
-		[self resettingLevelBtForAllFiveLevel];
-		
-	}
+//	if (bigLevel == 6) {
+//		
+//		NSLog(@"从隐藏关返回到五大关......@@@");
+//		[self resettingLevelBtForAllFiveLevel];
+//		
+//	}
 	
 	
 	// 设置大关...
@@ -670,12 +664,12 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 	[whatBt setImage:[UIImage imageNamed:@"gk_6.png"] forState:UIControlStateNormal];
 	
 	
-	if (bigLevel == 6) {
-		
-		NSLog(@"从隐藏关返回到五大关......@@@");
-		[self resettingLevelBtForAllFiveLevel];
-		
-	}	
+//	if (bigLevel == 6) {
+//		
+//		NSLog(@"从隐藏关返回到五大关......@@@");
+//		[self resettingLevelBtForAllFiveLevel];
+//		
+//	}	
 	
 	// 设置大关...
 	[userInfo setInteger:3 forKey:@"bigLevel"];
@@ -708,12 +702,12 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 	[whatBt setImage:[UIImage imageNamed:@"gk_6.png"] forState:UIControlStateNormal];
 	
 	
-	if (bigLevel == 6) {
-		
-		NSLog(@"从隐藏关返回到五大关......@@@");
-		[self resettingLevelBtForAllFiveLevel];
-		
-	}
+//	if (bigLevel == 6) {
+//		
+//		NSLog(@"从隐藏关返回到五大关......@@@");
+//		[self resettingLevelBtForAllFiveLevel];
+//		
+//	}
 	
 	
 	// 设置大关...
@@ -746,12 +740,12 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 	[veryHardBt setImage:[UIImage imageNamed:@"gk_5_1.png"] forState:UIControlStateNormal];
 	[whatBt setImage:[UIImage imageNamed:@"gk_6.png"] forState:UIControlStateNormal];
 	
-	if (bigLevel == 6) {
-		
-		NSLog(@"从隐藏关返回到五大关......@@@");
-		[self resettingLevelBtForAllFiveLevel];
-		
-	}
+//	if (bigLevel == 6) {
+//		
+//		NSLog(@"从隐藏关返回到五大关......@@@");
+//		[self resettingLevelBtForAllFiveLevel];
+//		
+//	}
 	
 	// 设置大关...
 	[userInfo setInteger:5 forKey:@"bigLevel"];
@@ -831,7 +825,6 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 
 
 
-
 // 删除当前所有小关bt,并重新初始化...
 - (void)resettingLevelBtForAllFiveLevel {
 
@@ -891,12 +884,12 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 
 	
 	// 若是隐藏关,则直接退出,返回到隐藏关的方法...
-	if (bigLevel == 6) {
-		
-		[self selectHideLevel];
-		return;
-		
-	}
+//	if (bigLevel == 6) {
+//		
+//		[self selectHideLevel];
+//		return;
+//		
+//	}
 	
 	
 	// 以下方法适用于前五大关...
@@ -913,40 +906,40 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 		switch (bigLevel) {
 			case 1:
 				
-				smallOpenNum = 99;	// 若是首先进入 or 没有通过一次关, 则启用默认设置, 只开放3关, 并保存设置
+				smallOpenNum = 99;	// 若是首先进入 or 没有通过一次关, 则启用默认设置, 只开放99关, 并保存设置
 				[userInfo setInteger:99 forKey:smallNumStr];
 				
 				break;
 			case 2:
 				
-				smallOpenNum = 6;	// 若是首先进入 or 没有通过一次关, 则启用默认设置, 只开放3关, 并保存设置
-				[userInfo setInteger:6 forKey:smallNumStr];
+				smallOpenNum = 18;	// 若是首先进入 or 没有通过一次关, 则启用默认设置, 只开放18关, 并保存设置
+				[userInfo setInteger:18 forKey:smallNumStr];
 				
 				break;
 			case 3:
+				
+				smallOpenNum = 9;	// 若是首先进入 or 没有通过一次关, 则启用默认设置, 只开放9关, 并保存设置
+				[userInfo setInteger:9 forKey:smallNumStr];
+				
+				break;
+			case 4:
 				
 				smallOpenNum = 3;	// 若是首先进入 or 没有通过一次关, 则启用默认设置, 只开放3关, 并保存设置
 				[userInfo setInteger:3 forKey:smallNumStr];
 				
 				break;
-			case 4:
-				
-				smallOpenNum = 2;	// 若是首先进入 or 没有通过一次关, 则启用默认设置, 只开放3关, 并保存设置
-				[userInfo setInteger:2 forKey:smallNumStr];
-				
-				break;
-			case 5:
-				
-				smallOpenNum = 1;	// 若是首先进入 or 没有通过一次关, 则启用默认设置, 只开放3关, 并保存设置
-				[userInfo setInteger:1 forKey:smallNumStr];
-				
-				break;
-			case 6:
-				
-				smallOpenNum = 9;	// 若是首先进入 or 没有通过一次关, 则启用默认设置, 只开放3关, 并保存设置
-				[userInfo setInteger:9 forKey:smallNumStr];
-				
-				break;
+//			case 5:
+//				
+//				smallOpenNum = 1;	// 若是首先进入 or 没有通过一次关, 则启用默认设置, 只开放3关, 并保存设置
+//				[userInfo setInteger:1 forKey:smallNumStr];
+//				
+//				break;
+//			case 6:
+//				
+//				smallOpenNum = 9;	// 若是首先进入 or 没有通过一次关, 则启用默认设置, 只开放3关, 并保存设置
+//				[userInfo setInteger:9 forKey:smallNumStr];
+//				
+//				break;
 			default:
 				break;
 		}
@@ -1041,8 +1034,8 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 							
 							int timeCount = (int)[userInfo integerForKey:passTimeStr];
 							//NSLog(@"总的用时为<%d>秒...", timeCount);
-							NSString *timeStr = [NSString stringWithString:@"已用时:  "];
-							[self showTimeCountInfo:timeCount forTimeString:&timeStr];
+							NSString *timeStr = @"已用时:  ";
+						[self showTimeCountInfo:timeCount forTimeString:&timeStr];
 							passTimeLb.text = timeStr;
 							//NSLog(@">>>>>>>>>>>>>>>当前关已用时:%@", timeStr);
 							
@@ -1102,7 +1095,7 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 					firstDateLb.text = (NSString *)[userInfo stringForKey:firstDate];
 					
 					int firstT = [userInfo integerForKey:firstTime];
-					NSString *firstStr = [NSString stringWithString:@""];
+					NSString *firstStr = @"";
 					[self showTimeCountInfo:firstT forTimeString:&firstStr];
 					firstTimeLb.text = firstStr;
 					
@@ -1125,7 +1118,7 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 						secondDateLb.text = (NSString *)[userInfo stringForKey:secondDate];
 						
 						int secondT = [userInfo integerForKey:secondTime];
-						NSString *secondStr = [NSString stringWithString:@""];
+						NSString *secondStr = @"";
 						[self showTimeCountInfo:secondT forTimeString:&secondStr];
 						secondTimeLb.text = secondStr;
 						
@@ -1144,7 +1137,7 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 							thirdDateLb.text = (NSString *)[userInfo stringForKey:thirdDate];
 							
 							int thirdT = [userInfo integerForKey:thirdTime];
-							NSString *thirdStr = [NSString stringWithString:@""];
+							NSString *thirdStr = @"";
 							[self showTimeCountInfo:thirdT forTimeString:&thirdStr];
 							thirdTimeLb.text = thirdStr;
 							
@@ -1263,7 +1256,7 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 
 
 // 隐藏关bt点击后的处理
-// 前掉是隐藏关已解锁...
+// 前提是隐藏关已解锁...
 - (void)selectHideLevel {
 	
 	
@@ -1344,8 +1337,8 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 								
 								int timeCount = (int)[userInfo integerForKey:passTimeStr];
 								//NSLog(@"总的用时为<%d>秒...", timeCount);
-								NSString *timeStr = [NSString stringWithString:@"已用时:  "];
-								[self showTimeCountInfo:timeCount forTimeString:&timeStr];
+								NSString *timeStr = @"已用时:  ";
+							[self showTimeCountInfo:timeCount forTimeString:&timeStr];
 								passTimeLb.text = timeStr;
 								
 							}
@@ -1406,7 +1399,7 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 						firstDateLb.text = (NSString *)[userInfo stringForKey:firstDate];
 						
 						int firstT = [userInfo integerForKey:firstTime];
-						NSString *firstStr = [NSString stringWithString:@""];
+						NSString *firstStr = @"";
 						[self showTimeCountInfo:firstT forTimeString:&firstStr];
 						firstTimeLb.text = firstStr;
 						
@@ -1430,7 +1423,7 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 							secondDateLb.text = (NSString *)[userInfo stringForKey:secondDate];
 							
 							int secondT = [userInfo integerForKey:secondTime];
-							NSString *secondStr = [NSString stringWithString:@""];
+							NSString *secondStr = @"";
 							[self showTimeCountInfo:secondT forTimeString:&secondStr];
 							secondTimeLb.text = secondStr;
 							
@@ -1450,7 +1443,7 @@ const int hideLevelNum = 27;	// 设置隐藏大关的小关个数...
 								thirdDateLb.text = (NSString *)[userInfo stringForKey:thirdDate];
 								
 								int thirdT = [userInfo integerForKey:thirdTime];
-								NSString *thirdStr = [NSString stringWithString:@""];
+								NSString *thirdStr = @"";
 								[self showTimeCountInfo:thirdT forTimeString:&thirdStr];
 								thirdTimeLb.text = thirdStr;
 								
